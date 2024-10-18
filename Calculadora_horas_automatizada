@@ -77,8 +77,12 @@ styled_table = (
     })
 )
 
-# Exibe a tabela estilizada
-styled_table
+# Exibindo a tabela direto no Jupyter Notebook
+try:
+    from IPython.display import display  # Apenas para ambientes interativos
+    display(styled_table)
+except ImportError:
+    print(df)  # Exibe em formato texto no terminal
 
 # (Opcional) Salvar resultado em um novo arquivo Excel
 df.to_excel(r"C:\Users\luiz.bessa\Downloads\resultado_automatizacao.xlsx", index=False)
