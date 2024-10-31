@@ -1,0 +1,165 @@
+import random
+from openpyxl import Workbook
+from openpyxl import load_workbook
+from openpyxl.utils import get_column_letter
+from openpyxl.chart import BarChart, PieChart, LineChart, Reference
+from openpyxl.chart.label import DataLabelList
+
+# 1. Geração de planilha com dados randomicos
+workbook = Workbook()
+sheet = workbook.active
+sheet.title = 'Estoque' #Use o nome que vais ilustre o estudo
+
+# Definindo cabeçalhos
+headers = ['Nome do produto', 'Valor do fornecedor', 'Lucratividade (%)', 'Quantidade']
+for col_num, header in enumerate(headers, start=1):
+    sheet.cell(row=1, column=col_num, value=header)
+
+# Função para gerar nome do produto
+def gerar_nome_produto():
+    prefixos = ['Super', 'Mega', 'Ultra', 'Power', 'Eco', 'Max']
+                #Aqui eu dei uma exagerada na quantidade de variaveis para ver até onde poderiamos ir
+    tipos = { 
+        "Eletrônicos": ["Fone", "Televisor", "Smartphone", "Tablet", "Drone", "Câmera"],
+        "Automotivo": ["Pneu", "Amortecedor", "Bateria", "Farol", "Filtro", "Escapamento"],
+        "Beleza": ["Creme", "Shampoo", "Perfume", "Máscara", "Sabonete", "Hidratante"],
+        "Esportes": ["Tênis", "Raquete", "Bola", "Bike", "Tapete", "Luvas"],
+        "Casa e Jardim": ["Vaso", "Almofada", "Cortina", "Ferramenta", "Iluminação", "Porta"],
+        "Brinquedos": ["Boneca", "Carrinho", "Bloco", "Jogo", "Pelúcia", "Quebra-cabeça"]
+    }
+    sufixos = ['Standard', 'Plus', 'Deluxe', 'Limited', 'Pro', 'Premium']
+        #Como coloquei muitas variaveis em "tipos" tive que fazer o random dele separadamente pois estava com problemas
+    categoria = random.choice(list(tipos.keys()))
+    tipo = random.choice(tipos[categoria])
+    return f'{random.choice(prefixos)} {tipo} {random.choice(sufixos)}'
+
+# Preenchendo a planilha com dados aleatórios
+num_produtos = 50 # Aqui pode será o tamanho da platagem
+for row_num in range(2, num_produtos + 2):
+    nome_produto = gerar_nome_produto()
+    valor_fornecedor = round(random.uniform(10.0, 500.0), 2)
+    lucratividade = random.randint(10, 100)
+    quantidade = random.randint(1, 100)
+
+    sheet.cell(row=row_num, column=1, value=nome_produto)
+    sheet.cell(row=row_num, column=2, value=valor_fornecedor)
+    sheet.cell(row=row_num, column=3, value=lucratividade)
+    sheet.cell(row=row_num, column=4, value=quantidade)
+#primeiro save para corte no código caso não queira continuar com o estudo
+file_path = 'C:\\Users\\luiz.bessa\\Documents\\estoque.xlsx' #Caminho que irá salvar a planilha
+workbook.save(file_path)
+
+# 2. Estudo para inserir formulas na planilha
+workbook = load_workbook(file_path)
+sheet = workbook['Estoque']
+
+# Definindo colunas e cabeçalhos adicionais
+col_nome_produto = 1
+col_valor_fornecedor = 2
+col_lucratividade = 3
+col_quantidade = 4
+col_preco_venda = 5
+col_lucro_total = 6
+col_valor_total = 7
+
+sheet.cell(row=1, column=col_preco_venda, value='Preço de Venda')
+sheet.cell(row=1, column=col_lucro_total, value='Lucro Total')
+sheet.cell(row=1, column=col_valor_total, value='Valor Total')
+
+max_row = sheet.max_row
+
+# Aplicando fórmulas
+for row in range(2, max_row + 1):
+    cell_valor_fornecedor = sheet.cell(row=row, column=col_valor_fornecedor)
+    cell_lucratividade = sheet.cell(row=row, column=col_lucratividade)
+    cell_quantidade = sheet.cell(row=row, column=col_quantidade)
+    cell_preco_venda = sheet.cell(row=row, column=col_preco_venda)
+
+    # Definindo fórmulas com '=' se não vai plotar apenas as referencias antes da operação
+    cell_preco_venda.value = f'={cell_valor_fornecedor.coordinate}*(1+{cell_lucratividade.coordinate}/100)'
+    sheet.cell(row=row, column=col_lucro_total).value = f'={cell_preco_venda.coordinate}-{cell_valor_fornecedor.coordinate}'
+    sheet.cell(row=row, column=col_valor_total).value = f'={cell_preco_venda.coordinate}*{cell_quantidade.coordinate}'
+
+# Inserindo linha de totais gerais
+linha_total = max_row + 2
+sheet.cell(row=linha_total, column=col_nome_produto, value='Totais Gerais')
+sheet.merge_cells(start_row=linha_total, start_column=col_nome_produto, end_row=linha_total, end_column=col_quantidade)
+
+sheet.cell(row=linha_total, column=col_lucro_total).value = f'=SUM({get_column_letter(col_lucro_total)}2:{get_column_letter(col_lucro_total)}{max_row})'
+sheet.cell(row=linha_total, column=col_valor_total).value = f'=SUM({get_column_letter(col_valor_total)}2:{get_column_letter(col_valor_total)}{max_row})'
+
+#Save point finalizando o estudo 2
+workbook.save(file_path)
+
+# 3. Criação dos gráficos
+workbook = load_workbook(file_path)
+sheet = workbook['Estoque']
+graph_sheet = workbook.create_sheet(title='Graficos')
+
+max_row = sheet.max_row
+if sheet.cell(row=max_row, column=col_nome_produto).value == 'Totais Gerais':
+    max_row -= 2
+
+# Gráfico de barras - Valor Total em Estoque
+bar_chart_valor_total = BarChart()
+bar_chart_valor_total.title = 'Valor Total em Estoque por Produto'
+bar_chart_valor_total.y_axis.title = 'Valor Total (R$)'
+bar_chart_valor_total.x_axis.title = 'Produto'
+
+data = Reference(sheet, min_col=col_valor_total, min_row=1, max_row=max_row)
+cats = Reference(sheet, min_col=col_nome_produto, min_row=2, max_row=max_row)
+bar_chart_valor_total.add_data(data, titles_from_data=True)
+bar_chart_valor_total.set_categories(cats)
+bar_chart_valor_total.width = 30
+bar_chart_valor_total.height = 15
+graph_sheet.add_chart(bar_chart_valor_total, 'A1')
+
+# Gráfico de pizza - Top 5 Produtos com maior Lucratividade
+produtos_lucratividade = [
+    (sheet.cell(row=row, column=col_nome_produto).value, sheet.cell(row=row, column=col_lucratividade).value)
+    for row in range(2, max_row + 1)
+    if isinstance(sheet.cell(row=row, column=col_lucratividade).value, (int, float))
+]
+produtos_lucratividade.sort(key=lambda x: x[1], reverse=True)
+top_5_lucrativos = produtos_lucratividade[:5]
+
+# Planilha auxiliar para os dados do gráfico de pizza
+aux_sheet = workbook.create_sheet(title='Auxiliar')
+aux_sheet.cell(row=1, column=1, value='Nome do Produto')
+aux_sheet.cell(row=1, column=2, value='Lucratividade (%)')
+
+for idx, (nome_produto, lucratividade) in enumerate(top_5_lucrativos, start=2):
+    aux_sheet.cell(row=idx, column=1, value=nome_produto)
+    aux_sheet.cell(row=idx, column=2, value=lucratividade)
+
+pie_chart_lucratividade = PieChart()
+pie_chart_lucratividade.title = 'Top 5 produtos com maior Lucratividade'
+data = Reference(aux_sheet, min_col=2, min_row=2, max_row=6)
+labels = Reference(aux_sheet, min_col=1, min_row=2, max_row=6)
+pie_chart_lucratividade.add_data(data, titles_from_data=False)
+pie_chart_lucratividade.set_categories(labels)
+pie_chart_lucratividade.dataLabels = DataLabelList()
+pie_chart_lucratividade.dataLabels.showVal = True
+pie_chart_lucratividade.dataLabels.showPercent = True
+pie_chart_lucratividade.width = 20
+pie_chart_lucratividade.height = 15
+graph_sheet.add_chart(pie_chart_lucratividade, 'A25')
+
+# Gráfico de linhas - Quantidade de produtos em estoque
+line_chart_quantidade = LineChart()
+line_chart_quantidade.title = 'Quantidade de produtos em estoque'
+line_chart_quantidade.y_axis.title = 'Quantidade'
+line_chart_quantidade.x_axis.title = 'Produto'
+
+data = Reference(sheet, min_col=col_quantidade, min_row=1, max_row=max_row)
+cats = Reference(sheet, min_col=col_nome_produto, min_row=2, max_row=max_row)
+line_chart_quantidade.add_data(data, titles_from_data=True)
+line_chart_quantidade.set_categories(cats)
+line_chart_quantidade.width = 30
+line_chart_quantidade.height = 15
+graph_sheet.add_chart(line_chart_quantidade, 'A50')
+
+# Salvando a planilha final
+workbook.save(file_path)
+
+#Caso venha a realizar o estudo por completo, remover as partes que salvam entre as etapas para otimizar os trabalhos.
