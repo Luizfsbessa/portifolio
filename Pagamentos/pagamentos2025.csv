@@ -1,3 +1,925 @@
-﻿import pandas as pd
-df = pd.read_csv('seu_arquivo.csv')
-print(df.head())
+﻿Emissão;Vencimento;Fornecedor;C.Custo;Filial;Contábil;Categoria;NF;Solicitação;Ordem;NUF;Lançamento;Status
+;30/01/2025;Accesstage;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;Accesstage;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;Accesstage;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;Accesstage;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;Accesstage;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Accesstage;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Accesstage;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Accesstage;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Accesstage;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Accesstage;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Accesstage;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Accesstage;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Afinet;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;28/02/2025;Afinet;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/03/2025;Afinet;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/04/2025;Afinet;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/05/2025;Afinet;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/06/2025;Afinet;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/07/2025;Afinet;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/08/2025;Afinet;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/09/2025;Afinet;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/10/2025;Afinet;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/11/2025;Afinet;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/12/2025;Afinet;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/01/2025;Afinet;180;Ceasa;3200004;Links e internet;;;;;;NF/Boleto pendente
+;28/02/2025;Afinet;180;Ceasa;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/03/2025;Afinet;180;Ceasa;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/04/2025;Afinet;180;Ceasa;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/05/2025;Afinet;180;Ceasa;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/06/2025;Afinet;180;Ceasa;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/07/2025;Afinet;180;Ceasa;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/08/2025;Afinet;180;Ceasa;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/09/2025;Afinet;180;Ceasa;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/10/2025;Afinet;180;Ceasa;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/11/2025;Afinet;180;Ceasa;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/12/2025;Afinet;180;Ceasa;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/01/2025;Algar - 0800;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;28/02/2025;Algar - 0800;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/03/2025;Algar - 0800;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/04/2025;Algar - 0800;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/05/2025;Algar - 0800;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/06/2025;Algar - 0800;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/07/2025;Algar - 0800;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/08/2025;Algar - 0800;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/09/2025;Algar - 0800;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/10/2025;Algar - 0800;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/11/2025;Algar - 0800;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/12/2025;Algar - 0800;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/01/2025;Algar - Telefonia;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;28/02/2025;Algar - Telefonia;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/03/2025;Algar - Telefonia;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/04/2025;Algar - Telefonia;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/05/2025;Algar - Telefonia;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/06/2025;Algar - Telefonia;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/07/2025;Algar - Telefonia;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/08/2025;Algar - Telefonia;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/09/2025;Algar - Telefonia;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/10/2025;Algar - Telefonia;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/11/2025;Algar - Telefonia;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/12/2025;Algar - Telefonia;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/01/2025;Algar - Internet;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;28/02/2025;Algar - Internet;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/03/2025;Algar - Internet;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/04/2025;Algar - Internet;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/05/2025;Algar - Internet;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/06/2025;Algar - Internet;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/07/2025;Algar - Internet;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/08/2025;Algar - Internet;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/09/2025;Algar - Internet;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/10/2025;Algar - Internet;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/11/2025;Algar - Internet;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/12/2025;Algar - Internet;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/01/2025;Algar - Internet;11500;SP;3200004;Links e internet;;;;;;NF/Boleto pendente
+;28/02/2025;Algar - Internet;11500;SP;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/03/2025;Algar - Internet;11500;SP;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/04/2025;Algar - Internet;11500;SP;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/05/2025;Algar - Internet;11500;SP;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/06/2025;Algar - Internet;11500;SP;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/07/2025;Algar - Internet;11500;SP;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/08/2025;Algar - Internet;11500;SP;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/09/2025;Algar - Internet;11500;SP;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/10/2025;Algar - Internet;11500;SP;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/11/2025;Algar - Internet;11500;SP;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/12/2025;Algar - Internet;11500;SP;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/01/2025;Algar - Telefonia;11510;DF;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;28/02/2025;Algar - Telefonia;11510;DF;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/03/2025;Algar - Telefonia;11510;DF;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/04/2025;Algar - Telefonia;11510;DF;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/05/2025;Algar - Telefonia;11510;DF;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/06/2025;Algar - Telefonia;11510;DF;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/07/2025;Algar - Telefonia;11510;DF;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/08/2025;Algar - Telefonia;11510;DF;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/09/2025;Algar - Telefonia;11510;DF;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/10/2025;Algar - Telefonia;11510;DF;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/11/2025;Algar - Telefonia;11510;DF;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/12/2025;Algar - Telefonia;11510;DF;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/01/2025;Algar - Internet;11510;DF;3200004;Links e internet;;;;;;NF/Boleto pendente
+;28/02/2025;Algar - Internet;11510;DF;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/03/2025;Algar - Internet;11510;DF;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/04/2025;Algar - Internet;11510;DF;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/05/2025;Algar - Internet;11510;DF;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/06/2025;Algar - Internet;11510;DF;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/07/2025;Algar - Internet;11510;DF;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/08/2025;Algar - Internet;11510;DF;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/09/2025;Algar - Internet;11510;DF;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/10/2025;Algar - Internet;11510;DF;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/11/2025;Algar - Internet;11510;DF;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/12/2025;Algar - Internet;11510;DF;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/01/2025;Algar - Telefonia;11520;MG;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;28/02/2025;Algar - Telefonia;11520;MG;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/03/2025;Algar - Telefonia;11520;MG;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/04/2025;Algar - Telefonia;11520;MG;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/05/2025;Algar - Telefonia;11520;MG;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/06/2025;Algar - Telefonia;11520;MG;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/07/2025;Algar - Telefonia;11520;MG;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/08/2025;Algar - Telefonia;11520;MG;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/09/2025;Algar - Telefonia;11520;MG;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/10/2025;Algar - Telefonia;11520;MG;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/11/2025;Algar - Telefonia;11520;MG;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/12/2025;Algar - Telefonia;11520;MG;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/01/2025;Algar - Telefonia;11530;PE;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;28/02/2025;Algar - Telefonia;11530;PE;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/03/2025;Algar - Telefonia;11530;PE;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/04/2025;Algar - Telefonia;11530;PE;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/05/2025;Algar - Telefonia;11530;PE;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/06/2025;Algar - Telefonia;11530;PE;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/07/2025;Algar - Telefonia;11530;PE;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/08/2025;Algar - Telefonia;11530;PE;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/09/2025;Algar - Telefonia;11530;PE;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/10/2025;Algar - Telefonia;11530;PE;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/11/2025;Algar - Telefonia;11530;PE;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/12/2025;Algar - Telefonia;11530;PE;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/01/2025;Algar - Internet;11530;PE;3200004;Links e internet;;;;;;NF/Boleto pendente
+;28/02/2025;Algar - Internet;11530;PE;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/03/2025;Algar - Internet;11530;PE;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/04/2025;Algar - Internet;11530;PE;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/05/2025;Algar - Internet;11530;PE;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/06/2025;Algar - Internet;11530;PE;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/07/2025;Algar - Internet;11530;PE;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/08/2025;Algar - Internet;11530;PE;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/09/2025;Algar - Internet;11530;PE;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/10/2025;Algar - Internet;11530;PE;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/11/2025;Algar - Internet;11530;PE;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/12/2025;Algar - Internet;11530;PE;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/01/2025;Algar - Internet;12040;RP;3200004;Links e internet;;;;;;NF/Boleto pendente
+;28/02/2025;Algar - Internet;12040;RP;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/03/2025;Algar - Internet;12040;RP;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/04/2025;Algar - Internet;12040;RP;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/05/2025;Algar - Internet;12040;RP;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/06/2025;Algar - Internet;12040;RP;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/07/2025;Algar - Internet;12040;RP;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/08/2025;Algar - Internet;12040;RP;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/09/2025;Algar - Internet;12040;RP;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/10/2025;Algar - Internet;12040;RP;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/11/2025;Algar - Internet;12040;RP;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/12/2025;Algar - Internet;12040;RP;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/01/2025;Antharys;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;Antharys;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;Antharys;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;Antharys;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;Antharys;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Antharys;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Antharys;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Antharys;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Antharys;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Antharys;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Antharys;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Antharys;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;ASIS;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;ASIS;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;ASIS;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;ASIS;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;ASIS;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;ASIS;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;ASIS;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;ASIS;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;ASIS;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;ASIS;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;ASIS;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;ASIS;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Claro;180;Barra;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;28/02/2025;Claro;180;Barra;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/03/2025;Claro;180;Barra;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/04/2025;Claro;180;Barra;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/05/2025;Claro;180;Barra;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/06/2025;Claro;180;Barra;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/07/2025;Claro;180;Barra;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/08/2025;Claro;180;Barra;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/09/2025;Claro;180;Barra;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/10/2025;Claro;180;Barra;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/11/2025;Claro;180;Barra;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/12/2025;Claro;180;Barra;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/01/2025;Claro;180;Leblon;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;28/02/2025;Claro;180;Leblon;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/03/2025;Claro;180;Leblon;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/04/2025;Claro;180;Leblon;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/05/2025;Claro;180;Leblon;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/06/2025;Claro;180;Leblon;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/07/2025;Claro;180;Leblon;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/08/2025;Claro;180;Leblon;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/09/2025;Claro;180;Leblon;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/10/2025;Claro;180;Leblon;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/11/2025;Claro;180;Leblon;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/12/2025;Claro;180;Leblon;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/01/2025;Cobmais;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;Cobmais;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;Cobmais;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;Cobmais;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;Cobmais;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Cobmais;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Cobmais;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Cobmais;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Cobmais;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Cobmais;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Cobmais;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Cobmais;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Economapas;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;Economapas;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;Economapas;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;Economapas;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;Economapas;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Economapas;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Economapas;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Economapas;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Economapas;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Economapas;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Economapas;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Economapas;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Engti;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;28/02/2025;Engti;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/03/2025;Engti;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/04/2025;Engti;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/05/2025;Engti;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/06/2025;Engti;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/07/2025;Engti;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/08/2025;Engti;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/09/2025;Engti;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/10/2025;Engti;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/11/2025;Engti;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/12/2025;Engti;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/01/2025;Engti;11500;SP;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;28/02/2025;Engti;11500;SP;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/03/2025;Engti;11500;SP;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/04/2025;Engti;11500;SP;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/05/2025;Engti;11500;SP;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/06/2025;Engti;11500;SP;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/07/2025;Engti;11500;SP;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/08/2025;Engti;11500;SP;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/09/2025;Engti;11500;SP;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/10/2025;Engti;11500;SP;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/11/2025;Engti;11500;SP;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/12/2025;Engti;11500;SP;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/01/2025;Engti;11510;DF;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;28/02/2025;Engti;11510;DF;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/03/2025;Engti;11510;DF;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/04/2025;Engti;11510;DF;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/05/2025;Engti;11510;DF;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/06/2025;Engti;11510;DF;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/07/2025;Engti;11510;DF;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/08/2025;Engti;11510;DF;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/09/2025;Engti;11510;DF;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/10/2025;Engti;11510;DF;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/11/2025;Engti;11510;DF;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/12/2025;Engti;11510;DF;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/01/2025;Engti;11520;MG;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;28/02/2025;Engti;11520;MG;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/03/2025;Engti;11520;MG;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/04/2025;Engti;11520;MG;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/05/2025;Engti;11520;MG;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/06/2025;Engti;11520;MG;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/07/2025;Engti;11520;MG;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/08/2025;Engti;11520;MG;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/09/2025;Engti;11520;MG;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/10/2025;Engti;11520;MG;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/11/2025;Engti;11520;MG;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/12/2025;Engti;11520;MG;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/01/2025;Engti;11530;PE;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;28/02/2025;Engti;11530;PE;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/03/2025;Engti;11530;PE;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/04/2025;Engti;11530;PE;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/05/2025;Engti;11530;PE;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/06/2025;Engti;11530;PE;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/07/2025;Engti;11530;PE;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/08/2025;Engti;11530;PE;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/09/2025;Engti;11530;PE;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/10/2025;Engti;11530;PE;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/11/2025;Engti;11530;PE;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/12/2025;Engti;11530;PE;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/01/2025;Inventti;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;Inventti;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;Inventti;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;Inventti;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;Inventti;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Inventti;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Inventti;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Inventti;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Inventti;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Inventti;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Inventti;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Inventti;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Involves;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;Involves;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;Involves;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;Involves;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;Involves;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Involves;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Involves;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Involves;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Involves;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Involves;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Involves;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Involves;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Meest;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;Meest;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;Meest;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;Meest;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;Meest;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Meest;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Meest;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Meest;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Meest;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Meest;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Meest;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Meest;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Mesiscom;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;28/02/2025;Mesiscom;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/03/2025;Mesiscom;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/04/2025;Mesiscom;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/05/2025;Mesiscom;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/06/2025;Mesiscom;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/07/2025;Mesiscom;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/08/2025;Mesiscom;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/09/2025;Mesiscom;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/10/2025;Mesiscom;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/11/2025;Mesiscom;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/12/2025;Mesiscom;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/01/2025;MMCafé;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;MMCafé;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;MMCafé;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;MMCafé;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;MMCafé;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;MMCafé;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;MMCafé;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;MMCafé;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;MMCafé;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;MMCafé;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;MMCafé;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;MMCafé;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Movidesk;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;Movidesk;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;Movidesk;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;Movidesk;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;Movidesk;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Movidesk;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Movidesk;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Movidesk;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Movidesk;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Movidesk;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Movidesk;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Movidesk;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Movidesk whatsapp;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;Movidesk whatsapp;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;Movidesk whatsapp;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;Movidesk whatsapp;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;Movidesk whatsapp;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Movidesk whatsapp;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Movidesk whatsapp;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Movidesk whatsapp;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Movidesk whatsapp;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Movidesk whatsapp;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Movidesk whatsapp;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Movidesk whatsapp;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Myrp;12040;DF;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;Myrp;12040;RP;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;Myrp;12040;RP;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;Myrp;12040;RP;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;Myrp;12040;RP;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Myrp;12040;RP;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Myrp;12040;RP;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Myrp;12040;RP;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Myrp;12040;RP;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Myrp;12040;RP;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Myrp;12040;RP;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Myrp;12040;RP;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Myrp;11860;PA;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;Myrp;11860;PA;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;Myrp;11860;PA;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;Myrp;11860;PA;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;Myrp;11860;PA;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Myrp;11860;PA;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Myrp;11860;PA;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Myrp;11860;PA;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Myrp;11860;PA;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Myrp;11860;PA;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Myrp;11860;PA;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Myrp;11860;PA;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Myrp;11500;Moema;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;Myrp;11500;Moema;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;Myrp;11500;Moema;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;Myrp;11500;Moema;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;Myrp;11500;Moema;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Myrp;11500;Moema;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Myrp;11500;Moema;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Myrp;11500;Moema;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Myrp;11500;Moema;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Myrp;11500;Moema;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Myrp;11500;Moema;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Myrp;11500;Moema;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Myrp;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;Myrp;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;Myrp;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;Myrp;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;Myrp;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Myrp;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Myrp;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Myrp;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Myrp;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Myrp;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Myrp;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Myrp;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Myrp;170;Lote 22;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;Myrp;170;Lote 22;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;Myrp;170;Lote 22;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;Myrp;170;Lote 22;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;Myrp;170;Lote 22;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Myrp;170;Lote 22;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Myrp;170;Lote 22;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Myrp;170;Lote 22;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Myrp;170;Lote 22;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Myrp;170;Lote 22;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Myrp;170;Lote 22;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Myrp;170;Lote 22;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Myrp;170;Leblon;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;Myrp;170;Leblon;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;Myrp;170;Leblon;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;Myrp;170;Leblon;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;Myrp;170;Leblon;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Myrp;170;Leblon;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Myrp;170;Leblon;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Myrp;170;Leblon;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Myrp;170;Leblon;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Myrp;170;Leblon;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Myrp;170;Leblon;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Myrp;170;Leblon;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Myrp;170;Ceasa;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;Myrp;170;Ceasa;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;Myrp;170;Ceasa;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;Myrp;170;Ceasa;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;Myrp;170;Ceasa;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Myrp;170;Ceasa;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Myrp;170;Ceasa;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Myrp;170;Ceasa;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Myrp;170;Ceasa;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Myrp;170;Ceasa;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Myrp;170;Ceasa;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Myrp;170;Ceasa;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Myrp;170;Barra;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;Myrp;170;Barra;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;Myrp;170;Barra;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;Myrp;170;Barra;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;Myrp;170;Barra;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Myrp;170;Barra;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Myrp;170;Barra;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Myrp;170;Barra;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Myrp;170;Barra;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Myrp;170;Barra;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Myrp;170;Barra;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Myrp;170;Barra;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Narwall;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;Narwall;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;Narwall;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;Narwall;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;Narwall;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Narwall;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Narwall;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Narwall;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Narwall;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Narwall;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Narwall;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Narwall;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Neogrid;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;Neogrid;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;Neogrid;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;Neogrid;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;Neogrid;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Neogrid;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Neogrid;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Neogrid;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Neogrid;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Neogrid;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Neogrid;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Neogrid;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+13/11/2024;20/01/2025;Noctel;11520;MG;3200004;Links e internet;48748825;622382204;2217;46290;26/11/2024;Aguardando NUF
+13/11/2024;20/02/2025;Noctel;11520;MG;3200004;Links e internet;48748825;622382204;2217;46290;26/11/2024;Aguardando NUF
+13/11/2024;20/03/2025;Noctel;11520;MG;3200004;Links e internet;48748825;622382204;2217;46290;26/11/2024;Aguardando NUF
+13/11/2024;20/04/2025;Noctel;11520;MG;3200004;Links e internet;48748825;622382204;2217;46290;26/11/2024;Aguardando NUF
+13/11/2024;20/05/2025;Noctel;11520;MG;3200004;Links e internet;48748825;622382204;2217;46290;26/11/2024;Aguardando NUF
+13/11/2024;20/06/2025;Noctel;11520;MG;3200004;Links e internet;48748825;622382204;2217;46290;26/11/2024;Aguardando NUF
+13/11/2024;20/07/2025;Noctel;11520;MG;3200004;Links e internet;48748825;622382204;2217;46290;26/11/2024;Aguardando NUF
+13/11/2024;20/08/2025;Noctel;11520;MG;3200004;Links e internet;48748825;622382204;2217;46290;26/11/2024;Aguardando NUF
+13/11/2024;20/09/2025;Noctel;11520;MG;3200004;Links e internet;48748825;622382204;2217;46290;26/11/2024;Aguardando NUF
+13/11/2024;20/10/2025;Noctel;11520;MG;3200004;Links e internet;48748825;622382204;2217;46290;26/11/2024;Aguardando NUF
+13/11/2024;20/11/2025;Noctel;11520;MG;3200004;Links e internet;48748825;622382204;2217;46290;26/11/2024;Aguardando NUF
+13/11/2024;20/12/2025;Noctel;11520;MG;3200004;Links e internet;48748825;622382204;2217;46290;26/11/2024;Aguardando NUF
+;30/01/2025;OI;170;Leblon;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;28/02/2025;OI;170;Leblon;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/03/2025;OI;170;Leblon;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/04/2025;OI;170;Leblon;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/05/2025;OI;170;Leblon;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/06/2025;OI;170;Leblon;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/07/2025;OI;170;Leblon;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/08/2025;OI;170;Leblon;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/09/2025;OI;170;Leblon;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/10/2025;OI;170;Leblon;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/11/2025;OI;170;Leblon;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/12/2025;OI;170;Leblon;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/01/2025;OI;170;Barra;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;28/02/2025;OI;170;Barra;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/03/2025;OI;170;Barra;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/04/2025;OI;170;Barra;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/05/2025;OI;170;Barra;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/06/2025;OI;170;Barra;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/07/2025;OI;170;Barra;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/08/2025;OI;170;Barra;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/09/2025;OI;170;Barra;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/10/2025;OI;170;Barra;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/11/2025;OI;170;Barra;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/12/2025;OI;170;Barra;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/01/2025;Pathfind;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;Pathfind;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;Pathfind;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;Pathfind;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;Pathfind;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Pathfind;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Pathfind;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Pathfind;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Pathfind;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Pathfind;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Pathfind;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Pathfind;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Planus;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;28/02/2025;Planus;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/03/2025;Planus;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/04/2025;Planus;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/05/2025;Planus;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/06/2025;Planus;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/07/2025;Planus;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/08/2025;Planus;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/09/2025;Planus;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/10/2025;Planus;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/11/2025;Planus;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/12/2025;Planus;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/01/2025;Privacy Tool;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;Privacy Tool;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;Privacy Tool;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;Privacy Tool;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;Privacy Tool;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Privacy Tool;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Privacy Tool;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Privacy Tool;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Privacy Tool;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Privacy Tool;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Privacy Tool;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Privacy Tool;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;PROOF Firewall;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;28/02/2025;PROOF Firewall;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/03/2025;PROOF Firewall;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/04/2025;PROOF Firewall;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/05/2025;PROOF Firewall;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/06/2025;PROOF Firewall;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/07/2025;PROOF Firewall;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/08/2025;PROOF Firewall;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/09/2025;PROOF Firewall;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/10/2025;PROOF Firewall;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/11/2025;PROOF Firewall;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/12/2025;PROOF Firewall;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/01/2025;PROOF SOC;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;28/02/2025;PROOF SOC;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/03/2025;PROOF SOC;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/04/2025;PROOF SOC;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/05/2025;PROOF SOC;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/06/2025;PROOF SOC;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/07/2025;PROOF SOC;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/08/2025;PROOF SOC;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/09/2025;PROOF SOC;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/10/2025;PROOF SOC;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/11/2025;PROOF SOC;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/12/2025;PROOF SOC;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/01/2025;Ravex;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;Ravex;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;Ravex;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;Ravex;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;Ravex;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Ravex;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Ravex;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Ravex;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Ravex;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Ravex;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Ravex;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Ravex;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;RBPRINT;180;Matriz;3220013;Impressos;;;;;;NF/Boleto pendente
+;28/02/2025;RBPRINT;180;Matriz;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/03/2025;RBPRINT;180;Matriz;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/04/2025;RBPRINT;180;Matriz;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/05/2025;RBPRINT;180;Matriz;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/06/2025;RBPRINT;180;Matriz;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/07/2025;RBPRINT;180;Matriz;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/08/2025;RBPRINT;180;Matriz;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/09/2025;RBPRINT;180;Matriz;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/10/2025;RBPRINT;180;Matriz;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/11/2025;RBPRINT;180;Matriz;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/12/2025;RBPRINT;180;Matriz;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/01/2025;RBPRINT - Scaner;180;Matriz;3220013;Impressos;;;;;;NF/Boleto pendente
+;28/02/2025;RBPRINT - Scaner;180;Matriz;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/03/2025;RBPRINT - Scaner;180;Matriz;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/04/2025;RBPRINT - Scaner;180;Matriz;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/05/2025;RBPRINT - Scaner;180;Matriz;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/06/2025;RBPRINT - Scaner;180;Matriz;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/07/2025;RBPRINT - Scaner;180;Matriz;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/08/2025;RBPRINT - Scaner;180;Matriz;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/09/2025;RBPRINT - Scaner;180;Matriz;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/10/2025;RBPRINT - Scaner;180;Matriz;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/11/2025;RBPRINT - Scaner;180;Matriz;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/12/2025;RBPRINT - Scaner;180;Matriz;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/01/2025;RBPRINT;11500;SP;3220013;Impressos;;;;;;NF/Boleto pendente
+;28/02/2025;RBPRINT;11500;SP;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/03/2025;RBPRINT;11500;SP;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/04/2025;RBPRINT;11500;SP;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/05/2025;RBPRINT;11500;SP;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/06/2025;RBPRINT;11500;SP;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/07/2025;RBPRINT;11500;SP;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/08/2025;RBPRINT;11500;SP;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/09/2025;RBPRINT;11500;SP;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/10/2025;RBPRINT;11500;SP;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/11/2025;RBPRINT;11500;SP;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/12/2025;RBPRINT;11500;SP;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/01/2025;RBPRINT;11510;DF;3220013;Impressos;;;;;;NF/Boleto pendente
+;28/02/2025;RBPRINT;11510;DF;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/03/2025;RBPRINT;11510;DF;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/04/2025;RBPRINT;11510;DF;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/05/2025;RBPRINT;11510;DF;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/06/2025;RBPRINT;11510;DF;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/07/2025;RBPRINT;11510;DF;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/08/2025;RBPRINT;11510;DF;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/09/2025;RBPRINT;11510;DF;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/10/2025;RBPRINT;11510;DF;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/11/2025;RBPRINT;11510;DF;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/12/2025;RBPRINT;11510;DF;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/01/2025;RBPRINT;11520;MG;3220013;Impressos;;;;;;NF/Boleto pendente
+;28/02/2025;RBPRINT;11520;MG;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/03/2025;RBPRINT;11520;MG;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/04/2025;RBPRINT;11520;MG;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/05/2025;RBPRINT;11520;MG;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/06/2025;RBPRINT;11520;MG;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/07/2025;RBPRINT;11520;MG;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/08/2025;RBPRINT;11520;MG;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/09/2025;RBPRINT;11520;MG;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/10/2025;RBPRINT;11520;MG;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/11/2025;RBPRINT;11520;MG;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/12/2025;RBPRINT;11520;MG;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/01/2025;RBPRINT;11530;PE;3220013;Impressos;;;;;;NF/Boleto pendente
+;28/02/2025;RBPRINT;11530;PE;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/03/2025;RBPRINT;11530;PE;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/04/2025;RBPRINT;11530;PE;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/05/2025;RBPRINT;11530;PE;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/06/2025;RBPRINT;11530;PE;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/07/2025;RBPRINT;11530;PE;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/08/2025;RBPRINT;11530;PE;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/09/2025;RBPRINT;11530;PE;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/10/2025;RBPRINT;11530;PE;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/11/2025;RBPRINT;11530;PE;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/12/2025;RBPRINT;11530;PE;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/01/2025;RBPRINT;12040;RP;3220013;Impressos;;;;;;NF/Boleto pendente
+;28/02/2025;RBPRINT;12040;RP;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/03/2025;RBPRINT;12040;RP;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/04/2025;RBPRINT;12040;RP;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/05/2025;RBPRINT;12040;RP;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/06/2025;RBPRINT;12040;RP;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/07/2025;RBPRINT;12040;RP;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/08/2025;RBPRINT;12040;RP;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/09/2025;RBPRINT;12040;RP;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/10/2025;RBPRINT;12040;RP;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/11/2025;RBPRINT;12040;RP;3220013;Impressos;;;;;;NF/Boleto pendente
+;31/12/2025;RBPRINT;12040;RP;3220013;Impressos;;;;;;NF/Boleto pendente
+;30/01/2025;RD Station;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;RD Station;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;RD Station;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;RD Station;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;RD Station;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;RD Station;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;RD Station;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;RD Station;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;RD Station;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;RD Station;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;RD Station;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;RD Station;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Rede on corp;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;28/02/2025;Rede on corp;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/03/2025;Rede on corp;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/04/2025;Rede on corp;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/05/2025;Rede on corp;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/06/2025;Rede on corp;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/07/2025;Rede on corp;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/08/2025;Rede on corp;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/09/2025;Rede on corp;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/10/2025;Rede on corp;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/11/2025;Rede on corp;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/12/2025;Rede on corp;180;Matriz;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/01/2025;Rede on corp;180;Lote 22;3200004;Links e internet;;;67;;;NF/Boleto pendente
+;28/02/2025;Rede on corp;180;Lote 22;3200004;Links e internet;;;67;;;NF/Boleto pendente
+;31/03/2025;Rede on corp;180;Lote 22;3200004;Links e internet;;;67;;;NF/Boleto pendente
+;30/04/2025;Rede on corp;180;Lote 22;3200004;Links e internet;;;67;;;NF/Boleto pendente
+;31/05/2025;Rede on corp;180;Lote 22;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/06/2025;Rede on corp;180;Lote 22;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/07/2025;Rede on corp;180;Lote 22;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/08/2025;Rede on corp;180;Lote 22;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/09/2025;Rede on corp;180;Lote 22;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/10/2025;Rede on corp;180;Lote 22;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/11/2025;Rede on corp;180;Lote 22;3200004;Links e internet;;;;;;NF/Boleto pendente
+;31/12/2025;Rede on corp;180;Lote 22;3200004;Links e internet;;;;;;NF/Boleto pendente
+;30/01/2025;Rubrum;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;Rubrum;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;Rubrum;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;Rubrum;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;Rubrum;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Rubrum;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Rubrum;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Rubrum;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Rubrum;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Rubrum;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Rubrum;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Rubrum;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Senior;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;Senior;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;Senior;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;Senior;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;Senior;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Senior;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Senior;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Senior;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Senior;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Senior;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Senior;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Senior;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Sismetro;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;Sismetro;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;Sismetro;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;Sismetro;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;Sismetro;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Sismetro;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Sismetro;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Sismetro;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Sismetro;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Sismetro;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Sismetro;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Sismetro;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Skymail;170;Matriz;3200003;Transferencia de Dados;;;;;;NF/Boleto pendente
+;28/02/2025;Skymail;170;Matriz;3200003;Transferencia de Dados;;;;;;NF/Boleto pendente
+;31/03/2025;Skymail;170;Matriz;3200003;Transferencia de Dados;;;;;;NF/Boleto pendente
+;30/04/2025;Skymail;170;Matriz;3200003;Transferencia de Dados;;;;;;NF/Boleto pendente
+;31/05/2025;Skymail;170;Matriz;3200003;Transferencia de Dados;;;;;;NF/Boleto pendente
+;30/06/2025;Skymail;170;Matriz;3200003;Transferencia de Dados;;;;;;NF/Boleto pendente
+;31/07/2025;Skymail;170;Matriz;3200003;Transferencia de Dados;;;;;;NF/Boleto pendente
+;31/08/2025;Skymail;170;Matriz;3200003;Transferencia de Dados;;;;;;NF/Boleto pendente
+;30/09/2025;Skymail;170;Matriz;3200003;Transferencia de Dados;;;;;;NF/Boleto pendente
+;31/10/2025;Skymail;170;Matriz;3200003;Transferencia de Dados;;;;;;NF/Boleto pendente
+;30/11/2025;Skymail;170;Matriz;3200003;Transferencia de Dados;;;;;;NF/Boleto pendente
+;31/12/2025;Skymail;170;Matriz;3200003;Transferencia de Dados;;;;;;NF/Boleto pendente
+;30/01/2025;Staff;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;Staff;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;Staff;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;Staff;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;Staff;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Staff;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Staff;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Staff;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Staff;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Staff;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Staff;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Staff;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Ascorp;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;28/02/2025;Ascorp;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/03/2025;Ascorp;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/04/2025;Ascorp;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/05/2025;Ascorp;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/06/2025;Ascorp;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/07/2025;Ascorp;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/08/2025;Ascorp;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/09/2025;Ascorp;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/10/2025;Ascorp;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/11/2025;Ascorp;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;31/12/2025;Ascorp;180;Matriz;3200001;Telefonia (fixa e móvel);;;;;;NF/Boleto pendente
+;30/01/2025;Vela;170;Barra;3170008;Manutenção de Software;;;81;;;NF/Boleto pendente
+;28/02/2025;Vela;170;Barra;3170008;Manutenção de Software;;;81;;;NF/Boleto pendente
+;31/03/2025;Vela;170;Barra;3170008;Manutenção de Software;;;81;;;NF/Boleto pendente
+;30/04/2025;Vela;170;Barra;3170008;Manutenção de Software;;;81;;;NF/Boleto pendente
+;31/05/2025;Vela;170;Barra;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Vela;170;Barra;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Vela;170;Barra;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Vela;170;Barra;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Vela;170;Barra;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Vela;170;Barra;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Vela;170;Barra;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Vela;170;Barra;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Vela;11510;DF;3170008;Manutenção de Software;;;2543;;;NF/Boleto pendente
+;28/02/2025;Vela;11510;DF;3170008;Manutenção de Software;;;2543;;;NF/Boleto pendente
+;31/03/2025;Vela;11510;DF;3170008;Manutenção de Software;;;2543;;;NF/Boleto pendente
+;30/04/2025;Vela;11510;DF;3170008;Manutenção de Software;;;2543;;;NF/Boleto pendente
+;31/05/2025;Vela;11510;DF;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Vela;11510;DF;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Vela;11510;DF;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Vela;11510;DF;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Vela;11510;DF;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Vela;11510;DF;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Vela;11510;DF;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Vela;11510;DF;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Vela;170;Leblon;3170008;Manutenção de Software;;;97;;;NF/Boleto pendente
+;28/02/2025;Vela;170;Leblon;3170008;Manutenção de Software;;;97;;;NF/Boleto pendente
+;31/03/2025;Vela;170;Leblon;3170008;Manutenção de Software;;;97;;;NF/Boleto pendente
+;30/04/2025;Vela;170;Leblon;3170008;Manutenção de Software;;;97;;;NF/Boleto pendente
+;31/05/2025;Vela;170;Leblon;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Vela;170;Leblon;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Vela;170;Leblon;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Vela;170;Leblon;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Vela;170;Leblon;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Vela;170;Leblon;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Vela;170;Leblon;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Vela;170;Leblon;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Vela;170;Matriz;3170008;Manutenção de Software;;;409786;;;NF/Boleto pendente
+;28/02/2025;Vela;170;Matriz;3170008;Manutenção de Software;;;409786;;;NF/Boleto pendente
+;31/03/2025;Vela;170;Matriz;3170008;Manutenção de Software;;;409786;;;NF/Boleto pendente
+;30/04/2025;Vela;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;Vela;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Vela;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Vela;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Vela;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Vela;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Vela;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Vela;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Vela;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Vela;11520;MG;3170008;Manutenção de Software;;;2198;;;NF/Boleto pendente
+;28/02/2025;Vela;11520;MG;3170008;Manutenção de Software;;;2198;;;NF/Boleto pendente
+;31/03/2025;Vela;11520;MG;3170008;Manutenção de Software;;;2198;;;NF/Boleto pendente
+;30/04/2025;Vela;11520;MG;3170008;Manutenção de Software;;;2198;;;NF/Boleto pendente
+;31/05/2025;Vela;11520;MG;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Vela;11520;MG;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Vela;11520;MG;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Vela;11520;MG;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Vela;11520;MG;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Vela;11520;MG;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Vela;11520;MG;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Vela;11520;MG;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Vela;11500;Moema;3170008;Manutenção de Software;;;44;;;NF/Boleto pendente
+;28/02/2025;Vela;11500;Moema;3170008;Manutenção de Software;;;44;;;NF/Boleto pendente
+;31/03/2025;Vela;11500;Moema;3170008;Manutenção de Software;;;44;;;NF/Boleto pendente
+;30/04/2025;Vela;11500;Moema;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;Vela;11500;Moema;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Vela;11500;Moema;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Vela;11500;Moema;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Vela;11500;Moema;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Vela;11500;Moema;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Vela;11500;Moema;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Vela;11500;Moema;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Vela;11500;Moema;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Vela;11530;PE;3170008;Manutenção de Software;;;785;;;NF/Boleto pendente
+;28/02/2025;Vela;11530;PE;3170008;Manutenção de Software;;;785;;;NF/Boleto pendente
+;31/03/2025;Vela;11530;PE;3170008;Manutenção de Software;;;785;;;NF/Boleto pendente
+;30/04/2025;Vela;11530;PE;3170008;Manutenção de Software;;;785;;;NF/Boleto pendente
+;31/05/2025;Vela;11530;PE;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Vela;11530;PE;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Vela;11530;PE;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Vela;11530;PE;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Vela;11530;PE;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Vela;11530;PE;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Vela;11530;PE;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Vela;11530;PE;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Vela;11500;SP;3170008;Manutenção de Software;;;310526;;;NF/Boleto pendente
+;28/02/2025;Vela;11500;SP;3170008;Manutenção de Software;;;310526;;;NF/Boleto pendente
+;31/03/2025;Vela;11500;SP;3170008;Manutenção de Software;;;310526;;;NF/Boleto pendente
+;30/04/2025;Vela;11500;SP;3170008;Manutenção de Software;;;310526;;;NF/Boleto pendente
+;31/05/2025;Vela;11500;SP;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Vela;11500;SP;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Vela;11500;SP;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Vela;11500;SP;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Vela;11500;SP;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Vela;11500;SP;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Vela;11500;SP;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Vela;11500;SP;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Vtex;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;Vtex;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;Vtex;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;Vtex;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;Vtex;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;Vtex;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;Vtex;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;Vtex;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;Vtex;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;Vtex;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;Vtex;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;Vtex;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;WMW;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;28/02/2025;WMW;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/03/2025;WMW;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/04/2025;WMW;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/05/2025;WMW;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/06/2025;WMW;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/07/2025;WMW;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/08/2025;WMW;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/09/2025;WMW;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/10/2025;WMW;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/11/2025;WMW;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;31/12/2025;WMW;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
+;30/01/2025;Zetech;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;28/02/2025;Zetech;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/03/2025;Zetech;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/04/2025;Zetech;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/05/2025;Zetech;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/06/2025;Zetech;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/07/2025;Zetech;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/08/2025;Zetech;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/09/2025;Zetech;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/10/2025;Zetech;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;30/11/2025;Zetech;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
+;31/12/2025;Zetech;180;Matriz;3170004;Manutenção de máquinas;;;;;;NF/Boleto pendente
