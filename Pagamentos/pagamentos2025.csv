@@ -1,4 +1,4 @@
-﻿Emissão;Vencimento;Fornecedor;C.Custo;Filial;Contábil;Categoria;NF;Solicitação;Ordem;NUF;Lançamento;Status
+﻿emissao;vencimento;fornecedor;custo;filial;contabil;categoria;nf;solicitacao;ordem;nuf;lancamento;status
 ;30/01/2025;Accesstage;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
 ;28/02/2025;Accesstage;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente
 ;31/03/2025;Accesstage;170;Matriz;3170008;Manutenção de Software;;;;;;NF/Boleto pendente

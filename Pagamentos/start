@@ -1,0 +1,76 @@
+import psycopg2
+import pandas as pd
+
+# Conexão com o banco de dados
+conn = psycopg2.connect(
+    host="aws-0-sa-east-1.pooler.supabase.com",
+    database="postgres",
+    user="postgres.teotdhtxyafbgpctvtns",
+    password="SENHAmaldita@33",
+    port="6543"
+)
+
+# Criação de um cursor
+cursor = conn.cursor()
+
+# Comando para criar a tabela com campos que aceitam NULL
+create_table_query = '''
+CREATE TABLE IF NOT EXISTS pagamentos (
+    id SERIAL PRIMARY KEY,
+    emissao DATE NULL,
+    vencimento DATE NULL,
+    fornecedor VARCHAR(255) NULL,
+    custo VARCHAR(255) NULL,
+    filial VARCHAR(255) NULL,
+    contabil VARCHAR(255) NULL,
+    categoria VARCHAR(255) NULL,
+    nf VARCHAR(255) NULL,
+    solicitacao VARCHAR(255) NULL,
+    ordem VARCHAR(255) NULL,
+    nuf VARCHAR(255) NULL,
+    lancamento DATE NULL,
+    status VARCHAR(50) NULL
+);
+'''
+
+# Executar o comando
+cursor.execute(create_table_query)
+
+# Confirmar as alterações no banco
+conn.commit()
+
+print("Tabela de pagamentos criada com sucesso!")
+
+# Caminho do arquivo CSV
+csv_file = 'Pagamentos/pagamentos2025.csv'
+
+# Carregar o arquivo CSV
+df = pd.read_csv(csv_file, delimiter=';')
+
+# Inserir os dados na tabela, convertendo valores NaN/NaT para None
+for index, row in df.iterrows():
+    cursor.execute('''
+    INSERT INTO pagamentos (
+        emissao, vencimento, fornecedor, custo, filial, contabil,
+        categoria, nf, solicitacao, ordem, nuf, lancamento, status
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    ''', (
+        pd.to_datetime(row['emissao'], errors='coerce', dayfirst=True).date() if pd.notnull(pd.to_datetime(row['emissao'], errors='coerce', dayfirst=True)) else None,
+        pd.to_datetime(row['vencimento'], errors='coerce', dayfirst=True).date() if pd.notnull(pd.to_datetime(row['vencimento'], errors='coerce', dayfirst=True)) else None,
+        row['fornecedor'] if pd.notnull(row['fornecedor']) else None,
+        row['custo'] if pd.notnull(row['custo']) else None,
+        row['filial'] if pd.notnull(row['filial']) else None,
+        row['contabil'] if pd.notnull(row['contabil']) else None,
+        row['categoria'] if pd.notnull(row['categoria']) else None,
+        row['nf'] if pd.notnull(row['nf']) else None,
+        row['solicitacao'] if pd.notnull(row['solicitacao']) else None,
+        row['ordem'] if pd.notnull(row['ordem']) else None,
+        row['nuf'] if pd.notnull(row['nuf']) else None,
+        pd.to_datetime(row['lancamento'], errors='coerce', dayfirst=True).date() if pd.notnull(pd.to_datetime(row['lancamento'], errors='coerce', dayfirst=True)) else None,
+        row['status'] if pd.notnull(row['status']) else None
+    ))
+
+# Confirmar a inserção dos dados
+conn.commit()
+
+print("Dados inseridos com sucesso!")
