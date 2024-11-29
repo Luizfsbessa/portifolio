@@ -6,7 +6,7 @@ conn = psycopg2.connect(
     host="aws-0-sa-east-1.pooler.supabase.com",
     database="postgres",
     user="postgres.teotdhtxyafbgpctvtns",
-    password="SENHAmaldita@33",
+    password="SENHA",
     port="6543"
 )
 
