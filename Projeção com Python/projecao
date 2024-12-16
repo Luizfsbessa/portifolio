@@ -4,9 +4,9 @@ import matplotlib.pyplot as plt
 
 # Input
 data = {
-    "Mês": ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro"],
-    "Aberto": [837, 734, 719, 928, 753, 689, 1101, 997, 991, 1144],
-    "Fechado": [846, 654, 787, 1066, 729, 776, 1085, 1017, 1036, 1143]
+    "Mês": ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro"],
+    "Aberto": [837, 734, 719, 928, 753, 689, 1101, 997, 991, 1144, 756],
+    "Fechado": [846, 654, 787, 1066, 729, 776, 1085, 1017, 1036, 1143, 847]
 }
 
 df = pd.DataFrame(data)
@@ -17,7 +17,7 @@ media_fechados = int(df["Fechado"].mean())
 taxa_resolucao_liquida = int(media_fechados - media_abertos)
 
 # Projeção
-backlog_inicial = 181
+backlog_inicial = 165
 meses = []
 backlog_projetado = []
 
