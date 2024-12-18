@@ -88,7 +88,4 @@ except ImportError:
 df.to_excel(r"C:\Users\luiz.bessa\Downloads\resultado_automatizacao.xlsx", index=False)
 
 print("Cálculo realizado e armazenado com sucesso")
- },
- "nbformat": 4,
- "nbformat_minor": 5
-}
+
